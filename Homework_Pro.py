@@ -101,7 +101,7 @@ class AuthenticationService:
         """
         for user in User.users:
             if user.username == username:
-                return "Пользователь с именем {user.username} уже существует!"
+                return f"Пользователь с именем {username} уже существует!"
         new_user = user_class(username, email, password, *args)
         return f"Пользователь с именем {username} зарегистрирован"
 
